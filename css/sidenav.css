@@ -1,0 +1,49 @@
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 0 width - change this with JavaScript */
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #014877;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    right: 0;
+    color: white;
+}
+
+.sidenav a {
+    padding: 4px 8px 4px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.sidenav div {
+    font-weight: bold;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+/* 
+.carousel-item img{
+    width: 200px;
+} */

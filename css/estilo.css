@@ -1,76 +1,71 @@
-@import "navbar.css";
-@import "sidebar.css";
+@import 'sidenav.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
-*{
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+.navbar-custom {
+    background-color: #014877;
 }
 
-.main{
-    padding-top: 60px;
+.navbar-brand {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+}
+
+.navbar-text-custom {
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    opacity: 1;
+}
+
+.dropdown-menu-custom {
     background-color: #003A60;
+    border: none;
 }
 
-.main img{
-    height: 250px;
-    display: block;
-    margin-left: auto;
-}
-
-.main-desc{
-    padding: 50px;
-    padding-top: 100px;
-}
-
-.main h1{
-    color:white;
-}
-
-.main p{
-    padding-top: 20px;
-    font-size: 20px;
-    color:white;
-    line-height: 30px;
-    width: 75%;
-}
-
-.content{
-    background-color: #0092D4;
-    width: 100%;
-    padding-bottom: 100px;
-}
-
-.grade{
-    padding: 100px 0px 0px 75px;
+.dropdown-menu-custom li a {
     color: white;
 }
 
-.grade h1{
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 50px;
+.school{
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    display: none;
 }
 
-.activity{
-    padding: 20px 0px 0px 25px;
-    width: 90%;
-} 
+.main{
+    background-color: #003A60;
+    color: white;
+}
 
-.activity-desc{
+.cover{
+    background-color: #003A60;
+    width: 100%;
     display: flex;
+    flex-direction: row-reverse;
 }
 
-.activity-desc p{
-    font-size: 25px;
-    line-height: 35px;
+.cover img{
+    max-height: 250px;
+    max-width: 100%;
 }
 
-.activity-desc img{
-    height: 200px;
-    margin-left: 50px;
+@media screen and (max-width: 600px) {
+    .navbar-text-custom {
+        display: none;
+    }
+    .school{
+        display: block;
+    }
 }
 
+.content{
+    background-color: #2398d4;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;;
+}
+
+.grade{
+    padding-top: 100px;
+}
