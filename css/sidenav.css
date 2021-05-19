@@ -1,11 +1,9 @@
-/* The side navigation menu */
-
 .sidenav {
     height: 100%;
     /* 0 width - change this with JavaScript */
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     background-color: #014877;
     overflow-x: hidden;
@@ -39,11 +37,4 @@
     .sidenav {
         padding-top: 15px;
     }
-    .sidenav a {
-        font-size: 18px;
-    }
 }
-/* 
-.carousel-item img{
-    width: 200px;
-} */
