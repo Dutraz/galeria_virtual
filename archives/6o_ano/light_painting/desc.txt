@@ -1,0 +1,6 @@
+{
+"nome": "Light Painting",
+"disciplina": "Arte",
+"professor": "Eduardo Dutra",
+"desc": "Observe a imagem a seguir. Nela, o artista Pablo Picasso faz a experiência de desenhar com uma caneta de luz, enquanto a câmera fotográfica captura sua imagem. Ele nomeia sua obra de light painting, ou seja, “pintura com a luz”.  Nesta atividade os alunos do 6º Ano experimentam esta técnica desenvolvida por Picasso."
+}

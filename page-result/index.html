@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="icon" href="img/frame.png">
+    <title>Galeria Virtual</title>
+</head>
+
+
+<body>
+
+    <nav class="navbar fixed-top navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GALERIA VIRTUAL</a>
+            <h4 class="navbar-text-custom" href="#">Marista São Francisco</h4>
+            <button class="navbar-toggler" onclick="changeNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <div id="mySidenav" class="sidenav">
+        <h3 class="container-fluid pt-2 school">Marista São Francisco</h3>
+        <!-- <div class="container-fluid pt-2 px-3">
+            Ensino Fundamental I
+            <a href="#1o_ano">1º Ano</a>
+            <a href="#2o_ano">2º Ano</a>
+            <a href="#3o_ano">3º Ano</a>
+            <a href="#4o_ano">4º Ano</a>
+            <a href="#5o_ano">5º Ano</a>
+        </div> -->
+        <div class="container-fluid pt-4 px-3">
+            Ensino Fundamental II
+            <a href="#6o_ano">6º Ano</a>
+            <a href="#7o_ano">7º Ano</a>
+            <!-- <a href="#8o_ano">8º Ano</a>
+            <a href="#9o_ano">9º Ano</a> -->
+        </div>
+        <!-- <div class="container-fluid pt-4 px-3">
+            Ensino Médio
+            <a href="#1a_serie">1ª Série</a>
+            <a href="#2a_serie">2ª Série</a>
+            <a href="#3a_serie">3ª Série</a>
+        </div> -->
+    </div>
+
+
+    <div class="container-fluid p-5 main">
+        <div class="container-fluid pt-5">
+            <h1 class="display-4 pt-5">Seja bem vindo!</h1>
+            <p class="lead">Esta é a Galeria Virtual do Colégio Marista São Francisco</p>
+            <hr class="my-4">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum autem quod dolorem. A libero commodi
+                itaque
+                exercitationem rerum, atque ab fuga quia unde esse id saepe natus soluta officiis ipsum?</p>
+        </div>
+    </div>
+    <div class="cover">
+        <img src="img/galeria_virtual.jpg" alt="">
+    </div>
+
+    <div class="container-fluid pt-5 content">
+        <div id="6o_ano" class="container-fluid p-4 grade"><h1 class="display-4">6º Ano</h1></div>
+<div class="activity p-3">
+    <h2 class="display-5">Desenho Livre</h2><span class="component">Arte</span><span class="teacher">Prof. Fulano de Tal</span>
+
+    <div class="container-fluid activity-desc border border-4 rounded my-4 p-3">
+        <p class="my-auto lead">Essa é uma atividade de desenho livre</p>
+        <img class="rounded mx-auto d-block p-2" src="img/activities/6o_ano/desenho_livre/desc-img.jpg">
+    </div>
+
+    <div class="container-fluid">
+        <img src="img/image_rope.png" class="mx-auto d-block rope">
+        <div class="container-fluid ratio ratio-4x3 frame">
+            <div class="container-fluid ratio ratio-4x3 activities">
+                <div id="carousel6o_anodesenho_livre" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100">
+                        
+                        <div class="carousel-item active">
+    <img src="img/activities/6o_ano/desenho_livre/desenho-livre-1.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/desenho_livre/desenho-livre-2.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/desenho_livre/desenho-livre-3.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel6o_anodesenho_livre" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel6o_anodesenho_livre" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="activity p-3">
+    <h2 class="display-5">Light Painting</h2><span class="component">Arte</span><span class="teacher">Prof. Eduardo Dutra</span>
+
+    <div class="container-fluid activity-desc border border-4 rounded my-4 p-3">
+        <p class="my-auto lead">Observe a imagem a seguir. Nela, o artista Pablo Picasso faz a experiência de desenhar com uma caneta de luz, enquanto a câmera fotográfica captura sua imagem. Ele nomeia sua obra de light painting, ou seja, “pintura com a luz”.  Nesta atividade os alunos do 6º Ano experimentam esta técnica desenvolvida por Picasso.</p>
+        <img class="rounded mx-auto d-block p-2" src="img/activities/6o_ano/light_painting/desc-img.jpg">
+    </div>
+
+    <div class="container-fluid">
+        <img src="img/image_rope.png" class="mx-auto d-block rope">
+        <div class="container-fluid ratio ratio-4x3 frame">
+            <div class="container-fluid ratio ratio-4x3 activities">
+                <div id="carousel6o_anolight_painting" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100">
+                        
+                        <div class="carousel-item active">
+    <img src="img/activities/6o_ano/light_painting/ALÍCIA TEDERKE ARGENTA - 63.png" class="d-block h-100">
+    <div class="carousel-caption"><h5>ALÍCIA TEDERKE ARGENTA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Ana Beatriz Mengarda Buosi - T.63.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANA BEATRIZ MENGARDA BUOSI T</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Ana Luísa Klotz t61 - 1.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANA LUÍSA KLOTZ T </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Ana Luísa Klotz t61 - 2.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANA LUÍSA KLOTZ T </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Ana Luísa Klotz t61 - 3.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANA LUÍSA KLOTZ T </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Ana Luísa Klotz t61 - 4.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANA LUÍSA KLOTZ T </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/ANNA BÁRBARA CARDOSO - 61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANNA BÁRBARA CARDOSO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/ANNA BÁRBARA CARDOSO -61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ANNA BÁRBARA CARDOSO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Augusto Ederson Tortelli - 62 A.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>AUGUSTO EDERSON TORTELLI A</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Augusto Ederson Tortelli - 62 B.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>AUGUSTO EDERSON TORTELLI B</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/BEATRIZ PARAVIZI - 64.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>BEATRIZ PARAVIZI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/BEATRIZ PARAVIZI -64.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>BEATRIZ PARAVIZI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/BEATRIZ PARAVIZI-64.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>BEATRIZ PARAVIZI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/BETINA SOPHIA BRAGA MARCHIOTTI - 61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>BETINA SOPHIA BRAGA MARCHIOTTI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/CAIO JOSÉ HOLOVATY PACHECO - 61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CAIO JOSÉ HOLOVATY PACHECO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/CaioJosé Holovaty Pacheco 61 (1).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CAIOJOSÉ HOLOVATY PACHECO ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/CaioJosé Holovaty Pacheco 61 (2).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CAIOJOSÉ HOLOVATY PACHECO ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/CaioJosé Holovaty Pacheco 61 (3).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CAIOJOSÉ HOLOVATY PACHECO ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Clara da turma 62 (1).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CLARA DA TURMA ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Clara da turma 62 (2).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CLARA DA TURMA ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Clara da turma 62 (3).jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>CLARA DA TURMA ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/EDUARDA BROCK -63.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>EDUARDA BROCK </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Gabriel 61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GABRIEL </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Gabriel Augusto Santa Catarina Mattia_62.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GABRIEL AUGUSTO SANTA CATARINA MATTIA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GIOVANA BASSO GARAFFA - 61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GIOVANA BASSO GARAFFA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GIOVANA BASSO GARAFFA -61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GIOVANA BASSO GARAFFA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GIOVANA BASSO GARAFFA-61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GIOVANA BASSO GARAFFA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GUILHERME CASAGRANDE SIMONATO - 62.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GUILHERME CASAGRANDE SIMONATO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GUSTAVO MALHEIROS SCHNEIDER - 63.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GUSTAVO MALHEIROS SCHNEIDER </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/GUSTAVO OPPERMANN NICKELE - 61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>GUSTAVO OPPERMANN NICKELE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isabela Cervini - T (1).jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA CERVINI T ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isabela Cervini - T (2).jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA CERVINI T ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isabela Cervini - T (3).jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA CERVINI T ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isabela Cervini - T (4).jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA CERVINI T ( )</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/ISABELA MASCARELLO CERVINI - 64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA MASCARELLO CERVINI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/ISABELA MASCARELLO CERVINI -64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA MASCARELLO CERVINI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/ISABELA MASCARELLO CERVINI-64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISABELA MASCARELLO CERVINI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isadora Cembranel Marcos - 62.JPG" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISADORA CEMBRANEL MARCOS </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isadora Cembranel Marcos -62.JPG" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISADORA CEMBRANEL MARCOS </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Isadora Cembranel Marcos-62.JPG" class="d-block h-100">
+    <div class="carousel-caption"><h5>ISADORA CEMBRANEL MARCOS </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/JULIA PAZINI BACHER - 61.JPG" class="d-block h-100">
+    <div class="carousel-caption"><h5>JULIA PAZINI BACHER </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/JULIE SMANIOTTO SFREDDO -63.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>JULIE SMANIOTTO SFREDDO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/KAUÃ COLPANI MICHELON - 62.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>KAUÃ COLPANI MICHELON </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Lays da Turma 64..jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LAYS DA TURMA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/LEONARDO RÜDIGER FURTADO - 61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LEONARDO RÜDIGER FURTADO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/LUCAS BOSCATTO ZANCHETTA - 64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUCAS BOSCATTO ZANCHETTA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/LUCAS BOSCATTO ZANCHETTA- 64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUCAS BOSCATTO ZANCHETTA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/LUCAS BOSCATTO ZANCHETTA-64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUCAS BOSCATTO ZANCHETTA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Luccas Grando Ressener - 62.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUCCAS GRANDO RESSENER </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Luccas Grando Ressener -62.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUCCAS GRANDO RESSENER </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Luiza Dalpra - 62.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUIZA DALPRA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Luís Miguel da turma 62.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>LUÍS MIGUEL DA TURMA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/Maria Cecília_61.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>MARIA CECÍLIA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/MARIA GABRIELA ROMAN FOLLE -63.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>MARIA GABRIELA ROMAN FOLLE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/MARIANA GERHARDT ROOS - 64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>MARIANA GERHARDT ROOS </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/NATAN ALVES DE LIMA- 61.png" class="d-block h-100">
+    <div class="carousel-caption"><h5>NATAN ALVES DE LIMA </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/NICOLE HARUMI NAGAYA ZAMBIASI - 61 - sm.gif" class="d-block h-100">
+    <div class="carousel-caption"><h5>NICOLE HARUMI NAGAYA ZAMBIASI SM</h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/NICOLE HARUMI NAGAYA ZAMBIASI - 61.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>NICOLE HARUMI NAGAYA ZAMBIASI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/SOFIA GAZZONI DOS PASSOS - 64.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>SOFIA GAZZONI DOS PASSOS </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/STHEFANI CECONI FERRARI - 63.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>STHEFANI CECONI FERRARI </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/VALENTINA FILIPPINI PIZZINATO - 63.JPG" class="d-block h-100">
+    <div class="carousel-caption"><h5>VALENTINA FILIPPINI PIZZINATO </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/6o_ano/light_painting/VICENTE DAL MAGRO GANZER -63.jpeg" class="d-block h-100">
+    <div class="carousel-caption"><h5>VICENTE DAL MAGRO GANZER </h5></div>
+</div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel6o_anolight_painting" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel6o_anolight_painting" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="7o_ano" class="container-fluid p-4 grade"><h1 class="display-4">7º Ano</h1></div>
+<div class="activity p-3">
+    <h2 class="display-5">Desenho Livre</h2><span class="component">Arte</span><span class="teacher">Prof. Fulano de Tal</span>
+
+    <div class="container-fluid activity-desc border border-4 rounded my-4 p-3">
+        <p class="my-auto lead">Essa é uma atividade de desenho livre</p>
+        <img class="rounded mx-auto d-block p-2" src="img/activities/7o_ano/desenho_livre/desc-img.jpg">
+    </div>
+
+    <div class="container-fluid">
+        <img src="img/image_rope.png" class="mx-auto d-block rope">
+        <div class="container-fluid ratio ratio-4x3 frame">
+            <div class="container-fluid ratio ratio-4x3 activities">
+                <div id="carousel7o_anodesenho_livre" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100">
+                        
+                        <div class="carousel-item active">
+    <img src="img/activities/7o_ano/desenho_livre/desenho-livre-1.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/7o_ano/desenho_livre/desenho-livre-2.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+<div class="carousel-item ">
+    <img src="img/activities/7o_ano/desenho_livre/desenho-livre-3.jpg" class="d-block h-100">
+    <div class="carousel-caption"><h5>DESENHO LIVRE </h5></div>
+</div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel7o_anodesenho_livre" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel7o_anodesenho_livre" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <script src="js/sidenav.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

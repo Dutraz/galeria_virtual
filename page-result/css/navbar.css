@@ -1,0 +1,29 @@
+.navbar-custom {
+    background-color: #014877;
+}
+
+.navbar-brand {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+}
+
+.navbar-text-custom {
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    opacity: 1;
+}
+
+.school{
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-text-custom {
+        display: none;
+    }
+    .school{
+        display: block;
+    }
+}

@@ -1,0 +1,41 @@
+@import 'sidenav.css';
+@import 'navbar.css';
+@import "activity.css";
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+.main {
+    background-color: #003A60;
+    color: white;
+}
+
+.cover {
+    background-color: #003A60;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cover img {
+    max-height: 250px;
+    max-width: 100%;
+}
+
+.content {
+    background-color: #2398d4;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.component{
+    background-color: orange;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+}
+
+.teacher{
+    background-color: purple;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+}
