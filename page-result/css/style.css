@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
+body{
+    background-color: #2398d4;
+}
+
 .main {
     background-color: #003A60;
     color: white;
@@ -23,7 +27,6 @@
 }
 
 .content {
-    background-color: #2398d4;
     color: white;
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -32,10 +35,16 @@
     background-color: orange;
     border-radius: 10px;
     padding: 0px 5px 0px 5px;
+    margin: 2px;
 }
 
 .teacher{
     background-color: purple;
     border-radius: 10px;
     padding: 0px 5px 0px 5px;
+    margin: 2px;
+}
+
+footer{
+    background-color: #003A60;
 }

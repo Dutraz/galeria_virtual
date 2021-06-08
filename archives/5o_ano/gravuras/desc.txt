@@ -1,0 +1,6 @@
+{
+"nome": "Gravuras",
+"disciplina": "Arte",
+"professor": "Eduardo Dutra",
+"desc": "Gravura é um termo utilizado para nomear um conjunto de técnicas artísticas utilizadas para produzir imagens a partir de suportes duros (placas ou blocos de metal, madeira, pedra, etc) e a partir destes é possível produzir inúmeras cópias."
+}

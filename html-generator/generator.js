@@ -66,7 +66,7 @@ async function pageContent() {
         let atividades = (await fs.readdir(dir_turma)).filter(i => i != 'desc.txt')
 
         for (atividade of atividades) {
-            let dir_atividade = joinPath(dir_turma, atividade)
+            let dir_atividade = joinPath(dir_turma, atividade)  
             let dir_result = joinPath(turma, atividade)
             let dir_imgs = joinPath('./page-result/img/activities', dir_result)
 
@@ -85,7 +85,7 @@ async function pageContent() {
                 carouselItens += await createHTML('carousel-item.html', {
                     'CAROUSEL-ACTIVE': pic == pictures[0] ? 'active' : '',
                     'CAROUSEL-PIC-DIR': joinPath(dir_result, pic),
-                    'CAROUSEL-CAPTION': aluno.replace(/[0-9]|-|_/gi,' ').replace(/  +/g, ' ').toUpperCase()
+                    'CAROUSEL-CAPTION': aluno.replace(/[0-9]|-|_|\(|\)/gi,' ').replace(/  +/g, ' ').toUpperCase()
                 })
             }
 

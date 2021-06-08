@@ -1,6 +1,6 @@
 .rope {
     margin: auto;
-    width: 15%;
+    width: 30%;
 }
 
 .frame {
@@ -27,19 +27,20 @@
 }
 
 .carousel-caption {
-    background-color:rgb(255, 255, 255, 0.5);
+    background-color: white;
+    width: 100%;
     color: black;
+    padding: 10px;
     bottom: -20px;
     top: auto;
-}
-
-.carousel-inner {
-    padding-bottom: px;
+    left: 0px;
 }
 
 .activity-desc img{
     width: 30%;
     margin: auto;
+    padding: 0%;
+    box-shadow: 10px 10px #755996;
 }
 
 @media screen and (max-width: 1000px) {
@@ -55,6 +56,12 @@
         font-size: medium;
     }
     .activity-desc img{
-        width:80%;
+        width:95%;
+    }
+    .rope{
+        width: 50%;
+    }
+    .carousel-caption{
+        font-size: 12px;
     }
 }
