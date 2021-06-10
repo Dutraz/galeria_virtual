@@ -68,20 +68,25 @@ async function pageContent() {
 
             let arquivos = await fs.readdir(dir_atividade)
             let ativDesc = JSON.parse(await fs.readFile(joinPath(dir_atividade, 'desc.txt'), 'utf8'))
-            let descImgName = arquivos.filter(f => f.includes('desc-img'))
-            let descImg = joinPath(dir_result, descImgName)
 
-            await copyFiles(joinPath(dir_atividade, descImgName), joinPath(dir_imgs, descImgName))
+            let descImgName = arquivos.filter(f => f.includes('desc-img'))[0]
+            let descMedia
+            if (arquivos.includes(descImgName)) {
+                await copyFiles(joinPath(dir_atividade, descImgName), joinPath(dir_imgs, descImgName))
+                descMedia = createHTML('activity-desc-image.html', { 'DESC-IMG-DIR': joinPath(dir_result, descImgName) })
+            } else {
+                descMedia = createHTML('activity-desc-yt-video.html', { 'YT-LINK': ativDesc.descYtVideo.replace('watch?v=', 'embed/') })
+            }
+
             let medias = []
-
             if (arquivos.includes('pictures')) {
                 await copyFiles(joinPath(dir_atividade, 'pictures'), dir_imgs)
                 console.log('Atividade contém Imagens')
-
                 let pictures = await fs.readdir(dir_atividade + '/pictures')
+
                 for (pic of pictures) {
-                    let aluno = pic.substr(0, pic.indexOf('.')).replace(/[0-9]|-|_|\(|\)/gi, ' ').replace(/  +/g, ' ').toUpperCase()
-                    let html = createHTML('carousel-item-img.html', { 'CAROUSEL-IMG-DIR': joinPath(dir_result, pic)})
+                    let aluno = pic.substr(0, pic.indexOf('.')).replace(atividade,' ').replace(/[0-9]|-|_|\(|\)/gi, ' ').replace(/  +/g, ' ').toUpperCase()
+                    let html = createHTML('carousel-item-img.html', { 'CAROUSEL-IMG-DIR': joinPath(dir_result, pic) })
                     medias.push([aluno, html])
                 }
             }
@@ -89,10 +94,10 @@ async function pageContent() {
             if (arquivos.includes('yt-videos.txt')) {
                 let videos = JSON.parse(await fs.readFile(joinPath(dir_atividade, 'yt-videos.txt'), 'utf8'))
                 console.log('Atividade contém Vídeos do Youtube')
-                
-                for (video in videos){
-                    let link = videos[video].replace('watch?v=', 'embed/').concat('?rel=0')
-                    let html = createHTML('carousel-item-yt-video.html',{'CAROUSEL-YT-LINK': link})
+
+                for (video in videos) {
+                    let link = videos[video].replace('watch?v=', 'embed/')
+                    let html = createHTML('carousel-item-yt-video.html', { 'CAROUSEL-YT-LINK': link })
                     medias.push([video, html])
                 }
             }
@@ -111,7 +116,7 @@ async function pageContent() {
                 'DISCIPLINA': ativDesc.disciplina,
                 'PROFESSOR': 'Prof. ' + ativDesc.professor,
                 'DESC': ativDesc.desc,
-                'DESC-IMG': descImg,
+                'DESC-MEDIA': descMedia,
                 'CAROUSEL-NAME': turma + atividade,
                 'CAROUSEL-ITENS': carouselItens
             })

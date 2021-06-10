@@ -36,11 +36,16 @@
     left: 0px;
 }
 
-.activity-desc img{
+.activity-desc-media{
     width: 30%;
-    margin: auto;
     padding: 0%;
+    margin: auto;
     box-shadow: 10px 10px #755996;
+}
+
+.carousel-control{
+    height: 15%;
+    width: auto;
 }
 
 @media screen and (max-width: 1000px) {
