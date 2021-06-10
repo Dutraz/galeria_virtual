@@ -1,6 +1,0 @@
-{
-"nome": "Desenho Cego",
-"disciplina": "Arte",
-"professor": "Eduardo Dutra",
-"desc": "'Desenho cego' que é a técnica de desenhar sem olhar para o papel foi utilizada como possibilidade concreta para cada aluno chegar a uma representação abstrata."
-}

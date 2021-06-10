@@ -1,6 +1,6 @@
 const fs = require('fs').promises
 const fse = require('fs-extra')
-let dir_archives = './archives'
+let dir_archives = '../archives'
 
 
 function joinPath(path1, path2) {
@@ -19,7 +19,7 @@ async function getParts() {
 }
 
 
-async function createHTML(part, attrs) {
+function createHTML(part, attrs) {
     part = parts[part]
     for (const attr in attrs) {
         part = part.split('#' + attr + "#").join(attrs[attr])
@@ -58,15 +58,11 @@ async function pageContent() {
         let dir_turma = joinPath(dir_archives, turma)
 
         let turma_nome = await fs.readFile(joinPath(dir_turma, 'desc.txt'), 'utf8')
-        pageContent += await createHTML('class.html', {
-            'TURMA': turma,
-            'TURMA-DESC': turma_nome
-        })
-
         let atividades = (await fs.readdir(dir_turma)).filter(i => i != 'desc.txt')
+        let content_atividades = ''
 
         for (atividade of atividades) {
-            let dir_atividade = joinPath(dir_turma, atividade)  
+            let dir_atividade = joinPath(dir_turma, atividade)
             let dir_result = joinPath(turma, atividade)
             let dir_imgs = joinPath('./page-result/img/activities', dir_result)
 
@@ -74,22 +70,43 @@ async function pageContent() {
             let ativDesc = JSON.parse(await fs.readFile(joinPath(dir_atividade, 'desc.txt'), 'utf8'))
             let descImgName = arquivos.filter(f => f.includes('desc-img'))
             let descImg = joinPath(dir_result, descImgName)
-            let pictures = await fs.readdir(dir_atividade + '/pictures')
-            let carouselItens = ''
 
-            await copyFiles(joinPath(dir_atividade, 'pictures'), dir_imgs)
             await copyFiles(joinPath(dir_atividade, descImgName), joinPath(dir_imgs, descImgName))
+            let medias = []
 
-            for (pic of pictures) {
-                let aluno = pic.substr(0, pic.indexOf('.'))
-                carouselItens += await createHTML('carousel-item.html', {
-                    'CAROUSEL-ACTIVE': pic == pictures[0] ? 'active' : '',
-                    'CAROUSEL-PIC-DIR': joinPath(dir_result, pic),
-                    'CAROUSEL-CAPTION': aluno.replace(/[0-9]|-|_|\(|\)/gi,' ').replace(/  +/g, ' ').toUpperCase()
+            if (arquivos.includes('pictures')) {
+                await copyFiles(joinPath(dir_atividade, 'pictures'), dir_imgs)
+                console.log('Atividade contém Imagens')
+
+                let pictures = await fs.readdir(dir_atividade + '/pictures')
+                for (pic of pictures) {
+                    let aluno = pic.substr(0, pic.indexOf('.')).replace(/[0-9]|-|_|\(|\)/gi, ' ').replace(/  +/g, ' ').toUpperCase()
+                    let html = createHTML('carousel-item-img.html', { 'CAROUSEL-IMG-DIR': joinPath(dir_result, pic)})
+                    medias.push([aluno, html])
+                }
+            }
+
+            if (arquivos.includes('yt-videos.txt')) {
+                let videos = JSON.parse(await fs.readFile(joinPath(dir_atividade, 'yt-videos.txt'), 'utf8'))
+                console.log('Atividade contém Vídeos do Youtube')
+                
+                for (video in videos){
+                    let link = videos[video].replace('watch?v=', 'embed/').concat('?rel=0')
+                    let html = createHTML('carousel-item-yt-video.html',{'CAROUSEL-YT-LINK': link})
+                    medias.push([video, html])
+                }
+            }
+
+            let carouselItens = ''
+            for (media of medias) {
+                carouselItens += createHTML('carousel-item.html', {
+                    'CAROUSEL-ACTIVE': media == medias[0] ? 'active' : '',
+                    'CAROUSEL-ITEM-MEDIA': media[1],
+                    'CAROUSEL-CAPTION': media[0]
                 })
             }
 
-            pageContent += await createHTML('activity.html', {
+            content_atividades += createHTML('activity.html', {
                 'ATIVIDADE': ativDesc.nome,
                 'DISCIPLINA': ativDesc.disciplina,
                 'PROFESSOR': 'Prof. ' + ativDesc.professor,
@@ -99,8 +116,13 @@ async function pageContent() {
                 'CAROUSEL-ITENS': carouselItens
             })
         }
+        pageContent += createHTML('class.html', {
+            'TURMA': turma,
+            'TURMA-DESC': turma_nome,
+            'ATIVIDADES': content_atividades
+        })
     }
-    fs.writeFile('page-result/index.html', await createHTML('page.html', { 'PAGE-CONTENT': pageContent }))
+    fs.writeFile('page-result/index.html', createHTML('page.html', { 'PAGE-CONTENT': pageContent }))
 }
 
 pageContent()
