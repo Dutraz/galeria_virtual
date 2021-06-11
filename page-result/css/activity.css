@@ -41,6 +41,7 @@
     padding: 0%;
     margin: auto;
     box-shadow: 10px 10px #755996;
+    background-color: green;
 }
 
 .carousel-control{
@@ -60,7 +61,7 @@
     .carousel-caption h5 {
         font-size: medium;
     }
-    .activity-desc img{
+    .activity-desc-media{
         width:95%;
     }
     .rope{
