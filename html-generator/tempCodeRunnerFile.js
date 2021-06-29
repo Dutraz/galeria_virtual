@@ -1,0 +1,2 @@
+
+        pageContent += createHTML('class.html', {
